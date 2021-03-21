@@ -1,0 +1,506 @@
+desktop = 1920px
+laptop = 1200px
+tablet = 768px
+smartphone = 550px
+small-smartphone = 320px
+
+*
+  padding 0
+  margin 0
+  box-sizing border-box
+  font-family "Lato", sans-serif
+
+.container
+  max-width 1140px
+  margin 0 auto
+
+/* media requests */
+
+@media screen and (max-width small-smartphone)
+  .main
+    .fetured
+      &__item
+        .item
+          &__dark
+            height 355px !important
+
+@media screen and (max-width smartphone)
+  .menu
+    display none !important
+  .user
+    display none !important
+  .special
+    font-size 27px !important
+  .bold
+    font-size 28px !important
+    display block !important
+    margin-right auto !important
+  .header
+    &__top
+      .top
+        &__wrapper
+          padding 0 15px !important
+    &__list
+      width 75% !important
+    &__content
+      height 375px
+      justify-content center !important
+      .content
+        &__img
+          display none !important
+        &__title
+          width 95% !important
+          font-size 20px !important
+  .main
+    .motions
+      padding 64px 15px !important
+      &__wrapper
+        grid-template-columns 1fr !important
+        grid-gap 30px 0 !important
+      &__item
+        grid-column-start 1
+        grid-column-end -1
+      &__item:last-of-type
+        height 120px !important
+        margin-top 0 !important
+    .fetured
+      padding-left 8px !important
+      padding-right 8px !important
+      &__box
+        justify-content space-around !important
+      &__item
+        margin 0 !important
+      &__item:not(:first-of-type)
+        margin-top 15px !important
+    .capabilities
+      &__wrapper
+        flex-direction column !important
+        align-items center !important
+      &__item
+        width 100% !important
+        .item
+          &__content
+            width 80% !important
+      &__item:not(:first-of-type)
+        margin-top 50px
+    .subscribe
+      &__wrapper
+        flex-direction column !important
+        align-items center !important
+      &__item
+        width 100% !important
+        .item
+          &__content
+            width 80% !important
+          &__title > .bold
+            margin 0 auto !important
+          &__title
+            text-align center !important
+      &__item:last-of-type
+        margin-top 60px !important
+  .footer
+    padding 25px 32px 40px 32px
+    &__wrapper
+      flex-direction column-reverse !important
+      align-items center !important
+    &__license
+      width 100% !important
+      text-align center !important
+      margin-top 40px !important
+    
+
+
+
+@media screen and (min-width smartphone) and (max-width laptop)
+  .header
+    &__top
+      .top
+        &__wrapper
+          padding 0 15px !important
+  .main
+    .motions
+      padding 64px 15px !important
+    .fetured
+      &__box
+        justify-content space-around !important
+    .capabilities
+      &__wrapper
+        flex-direction column !important
+        align-items center
+      &__item:not(:first-of-type)
+        margin-top 50px
+    .subscribe
+      &__wrapper
+        flex-direction column !important
+        align-items center !important
+      &__item:last-of-type
+        margin-top 60px !important
+
+
+@media screen and (min-width desktop)
+  .header
+    &__content
+      justify-content center !important
+      .content
+        &__title
+          margin-right 150px !important
+
+/* media requests */
+
+/* header */
+
+.search
+  display block
+  width 30px
+  height 30px
+  background url('../img/search.svg') center center / contain no-repeat
+
+.cart
+  display block
+  width 30px
+  height 30px
+  background url('../img/cart.svg') center center / contain no-repeat
+
+.menu
+  display block
+  width 30px
+  height 30px
+  background url('../img/menu.svg') center center / contain no-repeat
+
+.user
+  display block
+  width 30px
+  height 30px
+  background url('../img/user.svg') center center / contain no-repeat
+  
+.special
+  color #F16D7F
+  font-size 37px
+  font-weight 700
+
+.bold
+  font-weight: 900;
+  font-size: 48px;
+  color: #222
+
+.header
+  width 100%
+  display flex
+  flex-direction column
+  &__top
+    width 100%
+    background #222
+    .top
+      &__wrapper
+        height 75px
+        display flex
+        align-items center
+        justify-content space-between
+  &__logo
+    text-decoration none
+    display block
+    width 45px
+    height 45px
+    cursor pointer
+    background url('../img/logo.png') center center / contain no-repeat
+  &__list
+    list-style-type none
+    width 90%
+    display flex
+    align-items center
+    .list
+      &__item
+        cursor pointer
+      &__item:not(:first-of-type)
+        margin-left 30px
+      &__item:first-of-type
+        margin-right auto
+  &__content
+    width 100%
+    align-self center
+    background #F1E4E6
+    display flex
+    align-items center
+    .content
+      // &__wrapper
+      //   width 100%  
+      //   min-height 764px
+      //   display flex
+      //   align-items center
+      //   justify-content center
+      &__img
+        display block
+        max-width 50%
+      &__title
+        font-weight: 700;
+        font-size: 32px;
+        color: #222
+        width 385px
+        padding-left 15px
+        border-left 12px solid #F16D7F
+
+/* header */
+
+/* main */
+
+.women
+  background url('../img/for-woman.jpg') center center / cover no-repeat
+
+.men
+  background url('../img/for-man.jpg') center center / cover no-repeat
+
+.kids
+  background url('../img/for-kids.jpg') center center / cover no-repeat
+
+.accesories
+  background url('../img/for-accesories.jpg') center center / cover no-repeat
+
+.main
+  .motions
+    padding 65px 0
+    &__wrapper
+      display grid
+      grid-template-columns repeat(3, minmax(120px, 360px))
+      grid-gap 25px
+    &__item:not(:last-of-type)
+      height 260px
+      border 1px solid #000
+    &__item:last-of-type
+      height 180px
+      width 100%
+      grid-column 1/4
+      border 1px solid #000
+      margin-top 30px
+    &__item
+      .item
+        &__dark
+          width 100%
+          height 100%
+          display flex
+          align-items center
+          justify-content center
+          background rgba(33, 22, 22, .7)
+        &__title
+          width 100%
+          font-size: 16px;
+          color #fff
+          display flex
+          flex-direction column
+          align-items center
+        &__title > .special
+          font-size 24px !important
+          font-weight 700 !important
+  .fetured
+    padding 32px 0 90px 0
+    &__wrapper
+      display flex
+      width 100%
+      flex-direction column
+      align-items center
+    &__title
+      font-size: 30px;
+      color: #222222;
+      margin-bottom 5px
+    &__description
+      font-size 14px
+      color #9f9f9f
+      margin-bottom 48px
+      text-align center
+    &__box
+      display flex
+      flex-wrap wrap
+      width 100%
+      justify-content space-between
+    &__item
+      width 360px
+      display flex
+      flex-direction column
+      align-items center
+      cursor pointer
+      position relative
+      .item
+        &__dark
+          width 100%
+          height 420px
+          display flex
+          opacity 0
+          transition opacity .3s ease
+          align-items center
+          justify-content center
+          position absolute
+          background rgba(58, 56, 56, .85)
+          top 0
+          left 0
+          .dark
+            &__title
+              font-size 14px
+              display flex
+              align-items center
+              color #fff
+              border 1px solid #fff
+              padding 5px 10px
+            &__title > .cart
+              width 25px !important
+              height 25px !important
+              margin-right 10px !important
+        &__img
+          display block
+          width 100%
+        &__content
+          padding 25px 20px 20px 20px
+          width 100%
+          background #F8F8F8
+        &__title
+          font-size 13px
+          color #000
+          margin-bottom 10px
+        &__description
+          font-weight 300
+          font-size 14px
+          color #5D5D5D
+          margin-bottom 18px
+        &__price
+          font-size 16px
+          color #F16D7F
+    &__item:nth-of-type(2)
+      background #F7E4E2
+    &__item:nth-of-type(-n + 3)
+      margin-bottom 30px
+    &__item:hover .item__dark
+      opacity 1
+    &__button
+      display block
+      margin-top 50px
+      border 1px solid #FF6A6A
+      padding 15px 40px
+      outline none 
+      cursor pointer
+      background none
+      font-size 16px
+      color #f26376
+      transition color .3s, background .3s ease
+    &__button:hover
+      background #F16D7F
+      color #fff
+  .capabilities
+    padding 105px 0
+    background#222224
+    &__wrapper
+      display flex
+      width 100%
+      align-items center
+      justify-content space-between
+      flex-wrap wrap
+    &__item
+      width 360px
+      display flex
+      flex-direction column
+      align-items center
+      .item
+        &__img
+          display block
+          margin-bottom 30px
+        &__title
+          text-align center
+          font-size 20px
+          color #FBFBFB
+          margin-bottom 16px
+        &__description
+          text-align center
+          font-size 14px
+          font-weight 300
+          color #FBFBFB
+  .subscribe
+    padding 90px 0 120px
+    background url('../img/subscribe-bg.jpg') center center / cover no-repeat
+    &__wrapper
+      display flex
+      align-items center
+      justify-content space-between
+      width 100%
+      flex-wrap wrap
+    &__item
+      width 360px
+      display flex
+      flex-direction column
+      align-items center
+      .item
+        &__img
+          display block
+          margin-bottom 25px
+        &__content
+          width 100%
+        &__description
+          text-align center
+          font-size 20px
+          color #222224
+        &__title > .bold
+          font-size 24px !important
+          font-weight 700 !important
+          display block !important
+          color #222224 !important
+        &__title
+          font-size 18px
+          color #222224
+          display flex
+          flex-direction column
+          align-items center
+          line-height 1.5
+          margin-bottom 32px
+        &__input
+          padding 10px 20px
+          font-size 14px
+          color #222224
+          background #E1E1E1
+          border none 
+          outline none 
+          border-radius 20px 0 0 20px
+        &__button
+          outline none
+          background #E05C6E
+          color #fff
+          font-size 14px
+          border none 
+          cursor pointer
+          border-radius 0 20px 20px 0
+          padding 10px
+        &__box
+          display flex
+          align-items center
+          width 100%
+          justify-content center
+
+/* main */
+
+/* footer */
+
+.footer
+  padding 25px 32px
+  background #222224
+  &__wrapper
+    display flex
+    align-items center
+    justify-content space-between
+    width 100%
+  &__license
+    font-size 16px
+    color #FBFBFB
+  &__box
+    display flex
+    align-items center
+  &__link
+    text-decoration none
+    display block
+    width 32px
+    height 32px
+  &__link:not(:last-of-type)
+    margin-right 10px
+  &__svg
+    transition fill .3s ease
+  &__link:hover .footer__svg:first-child
+    fill #F16D7F
+  &__link:hover .footer__svg:last-child
+    fill #fff
+
+
+/* footer */
